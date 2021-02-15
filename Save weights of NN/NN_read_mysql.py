@@ -2,11 +2,22 @@ import numpy
 import math
 import glob
 import imageio
+from DataBase import DataBase
 
 class neuralNetworkRead:
 
     def __init__(self):
+        self.host = 'localhost'
+        self.user = 'root'
+        self.password = ''
+        self.database = 'neural_network'
+
+        self.base = DataBase(self.host, self.user, self.password, self.database)
+
         self.activation_function = lambda x: 1 / (1 + (math.e ** (-x)))
+
+        self.wih = self.base.select_row('weights_1')
+        self.who = self.base.select_row('weights_2')
 
     def query(self, inputs_list):
         inputs = numpy.array(inputs_list, ndmin=2).T
@@ -18,6 +29,7 @@ class neuralNetworkRead:
         final_outputs = self.activation_function(final_inputs)
 
         return final_outputs
+
 
 n = neuralNetworkRead()
 

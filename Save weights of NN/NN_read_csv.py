@@ -2,14 +2,30 @@ import numpy
 import math
 import glob
 import imageio
+import csv
 
 class neuralNetworkRead:
 
     def __init__(self):
         self.activation_function = lambda x: 1 / (1 + (math.e ** (-x)))
 
+    def read_csv(self, filepath):
+        val = []
+        with open(filepath, 'r', newline='') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                new_row = []
+                for i in row:
+                    i = float(i)
+                    new_row.append(i)
+                val.append(new_row)
+        return val
+
     def query(self, inputs_list):
         inputs = numpy.array(inputs_list, ndmin=2).T
+
+        self.wih = self.read_csv('weights_1.csv')
+        self.who = self.read_csv('weights_2.csv')
 
         hidden_inputs = numpy.dot(self.wih, inputs)
         hidden_outputs = self.activation_function(hidden_inputs)
@@ -18,6 +34,7 @@ class neuralNetworkRead:
         final_outputs = self.activation_function(final_inputs)
 
         return final_outputs
+
 
 n = neuralNetworkRead()
 
