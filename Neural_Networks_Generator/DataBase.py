@@ -1,3 +1,5 @@
+# (c) Denis Kosolapov 2020
+# License GPLv2 
 import mysql.connector
 
 class MySQL:
