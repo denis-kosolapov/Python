@@ -1,3 +1,4 @@
+# License GPLv2 
 import numpy
 import glob
 import imageio
