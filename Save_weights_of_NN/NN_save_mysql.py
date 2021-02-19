@@ -77,7 +77,38 @@ class neuralNetwork:
         database = 'neural_network'
 
         base = DataBase(host, user, password, database)
-
+        
+        # neural network parameters
+        parameters = [784, 200, 10]
+ 
+        name_w = []  # tables_name
+ 
+        for i in range(len(parameters)):
+            if i &gt; 0 and i &lt; len(parameters):
+                name_w.append('weights_' + str(i))
+        print(name_w)
+ 
+        weights_n = []
+        for i in range(len(parameters)):
+            if i &lt; len(parameters):
+                weights = []
+                for j in range(parameters[i]):
+                    if j &lt; parameters[i] - 1:
+                        n = 'w' + str(j + 1) + ' DOUBLE,'
+                        weights.append(n)
+                    else:
+                        n = 'w' + str(j + 1) + ' DOUBLE'
+                        weights.append(n)
+                weights_n.append(weights)
+ 
+        for i in range(len(name_w)):
+            w = " ".join(weights_n[i])
+            base.createTable_weights(name_w[i], w)
+ 
+        for i in range(len(name_w)):
+            w = " ".join(weights_n[i])
+            base.createTable_weights(name_w[i], w)
+        
         table_list = base.showColumnInfo(database, 'weights_1')
         column_info = base.getColumnInfo(table_list, 0)
         base.insertInto('weights_1', w_1, column_info)
