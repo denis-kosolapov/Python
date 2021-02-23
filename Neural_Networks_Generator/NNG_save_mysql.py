@@ -1,4 +1,5 @@
-# License GPLv2
+# (c) Kosolapov Denis 2021
+# License GPLv2 
 import numpy
 import glob
 import imageio
