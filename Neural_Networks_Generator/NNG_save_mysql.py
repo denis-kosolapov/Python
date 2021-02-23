@@ -1,5 +1,5 @@
 # (c) Kosolapov Denis 2021
-# License GPLv2 
+# License GPLv2
 import numpy
 import glob
 import imageio
@@ -72,21 +72,21 @@ class NeuralNetworkGenerate:
 
         final_outputs = self.layers_outputs(inputs)
 
-        # подключиться к базе данных
-        # если бд уже существует, то произойдет ошибка
+        # connect to database
+        # if database exist rise exception
         host = 'localhost'
         user = 'root'
         password = ''
         database = self.database
         base = DataBase(host, user, password, database)
 
-        # создать имена таблиц
+        # create names of tables
         name_w = []  # tables_name
         for i in range(len(self.parameters)):
             if i > 0 and i < len(self.parameters):
                 name_w.append('weights_' + str(i))
 
-        # создать столбцы в таблицах
+        # create columns in tables
         weights_n = []
         for i in range(len(self.parameters)):
             if i < len(self.parameters):
