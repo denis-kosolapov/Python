@@ -1,3 +1,5 @@
+# (c) Kosolapov Denis 2021
+# License GPLv2
 from DataBase import DataBase
 from DataBase import MySQL
 import numpy
