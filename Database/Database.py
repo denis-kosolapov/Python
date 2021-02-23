@@ -1,4 +1,4 @@
-# (c) Kosolapov Denis 2021
+# (c) Kosolapov Denis 2018
 # License GPLv2
 import mysql.connector
 
