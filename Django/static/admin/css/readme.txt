@@ -1,0 +1,1 @@
+Standartfiles of admin panel
