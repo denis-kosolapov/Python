@@ -1,0 +1,1 @@
+It is a small library to make MySQL easier to use. With it, you can log in as a root user and fully manage all databases. Create, update and delete databases and tables in one line of code. The ability to work with existing tables is provided.
