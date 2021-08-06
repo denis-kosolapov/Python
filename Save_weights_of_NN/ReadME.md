@@ -1,1 +1,1 @@
-Saving neural network weights to CSV tables and MySQL database.
+Saving and loading neural network weights into CSV tables and MySQL database.
