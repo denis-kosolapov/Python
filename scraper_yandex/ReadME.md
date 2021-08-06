@@ -1,0 +1,1 @@
+Downloading pictures from Yandex. The program takes requests to the search string from the MSKL database or from a text file. Two versions of the program. The first downloads the first 30 images on one request, the second downloads the first image on request.
