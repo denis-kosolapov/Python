@@ -1,5 +1,3 @@
-
-# (c) Denis Ksolapov 2018
 # License GPLv2 
 import re
 import time
