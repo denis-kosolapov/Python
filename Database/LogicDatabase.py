@@ -1,4 +1,3 @@
-# (c) Kosolapov Denis 2018
 # License GPLv2
 from DataBase import DataBase
 from DataBase import MySQL
