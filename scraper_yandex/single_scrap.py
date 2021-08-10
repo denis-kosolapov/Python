@@ -9,6 +9,7 @@ import urllib.parse as urlparse
 import random
 from Database import Database
 
+
 massive = Database()
 data = massive.myresult()
 for stroke in data:
