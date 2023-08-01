@@ -1,1 +1,1 @@
-This repository is dedicated to developing self-learning artificial intelligence on Python 3. At the moment I am using version 3.6.9, Windows 10. This code can be successfully run on Linux.
+It is a backpropagation neural network generator. A fully connected convolutional neural network is created automatically. Training is possible on any MNIST data. The project must be run on Python 3.6 (Conda 3.6)
