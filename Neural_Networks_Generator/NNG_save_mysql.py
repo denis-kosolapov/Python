@@ -117,11 +117,11 @@ database = 'new_nng'
 last_index = len(parameters) -1
 n = NeuralNetworkGenerate(parameters, learning_rate, database)
 
-training_data_file = open("mnist_train.csv", 'r')
+training_data_file = open("mnist_dataset/mnist_train.csv", 'r')
 training_data_list = training_data_file.readlines()
 training_data_file.close()
 
-epochs = 1
+epochs = 5
 for e in range(epochs):
     for record in training_data_list:
         all_values = record.split(',')
